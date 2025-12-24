@@ -1,4 +1,4 @@
-export {};
+
 // 年度ごとの選手リスト
 const playerList = {
   "2025": [
@@ -52,3 +52,4 @@ const cardTypes = {
 
 window.playerList = playerList;
 window.cardTypes = cardTypes;
+
