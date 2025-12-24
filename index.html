@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TJPW カード管理</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>TJPW カード管理</h1>
+</header>
+
+<div class="container">
+
+  <!-- ▼▼▼ メイン画面 ▼▼▼ -->
+  <div class="main-area">
+
+    <h2>年度選択</h2>
+    <select id="mainYearSelect">
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2023アンビシャス">2023アンビシャス</option>
+      <option value="2022">2022</option>
+    </select>
+
+    <button id="editModeBtn">編集モードへ</button>
+
+    <div id="matrixArea"></div>
+
+  </div>
+  <!-- ▲▲▲ メイン画面 ▲▲▲ -->
+
+
+  <!-- ▼▼▼ 編集画面 ▼▼▼ -->
+  <div class="edit-area" style="display:none;">
+
+    <h2>カードを追加</h2>
+
+    <div class="form">
+      <label>年度</label>
+      <select id="yearInput">
+        <option value="">選択してください</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2023アンビシャス">2023アンビシャス</option>
+        <option value="2022">2022</option>
+      </select>
+
+      <label>選手名</label>
+      <select id="nameInput">
+        <option value="">年度を先に選んでください</option>
+      </select>
+
+      <label>カード種別</label>
+      <select id="typeInput">
+        <option value="">年度を先に選んでください</option>
+      </select>
+
+      <label>所持</label>
+      <select id="haveInput">
+        <option value="未入手">未入手</option>
+        <option value="所持">所持</option>
+        <option value="自引き">自引き</option>
+      </select>
+
+      <label>購入価格</label>
+      <input type="number" id="priceInput" placeholder="例：600">
+
+      <button id="addBtn">追加</button>
+    </div>
+
+    <h2>登録済みカード一覧</h2>
+    <div id="cardList"></div>
+
+    <button id="backToMainBtn">メイン画面へ戻る</button>
+
+  </div>
+  <!-- ▲▲▲ 編集画面 ▲▲▲ -->
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+<script type="module">
+    import "./firebase-init.js";
+    import "./data.js";
+    import "./script.js";
+  </script>
+
+
+
+</body>
+</html>
