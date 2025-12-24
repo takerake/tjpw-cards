@@ -50,6 +50,5 @@ const cardTypes = {
 
 };
 
-window.playerList = playerList;
-window.cardTypes = cardTypes;
+
 
