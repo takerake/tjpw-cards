@@ -1,4 +1,3 @@
-import "./data.js";
 import { getDocs, collection, setDoc, deleteDoc, doc }
   from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { db, initFirebase } from "./firebase-init.js";
@@ -196,4 +195,5 @@ document.addEventListener("click", (e) => {
 window.onload = () => {
   const year = document.getElementById("mainYearSelect").value;
   renderMatrix(year);
+
 };
